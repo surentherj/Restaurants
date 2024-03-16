@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "2cfa4196-ef3c-4765-af1d-fec96094e0c8",
+		"name": "Online Restaurant Review",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New User Signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\": 2,\r\n    \"name\": \"Somu\",\r\n    \"password\": \"Next@1234\",\r\n    \"email\": \"Somu@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Password Reset Mail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Suren@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/getResetPasswordLink",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"getResetPasswordLink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Reset Link Verification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resetPasswordToken\": \"17316483-baee-424b-aea8-22ca83f1eea3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/verifyResetPasswordLink",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"verifyResetPasswordLink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Reset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resetPasswordToken\": \"17316483-baee-424b-aea8-22ca83f1eea3\",\r\n    \"newPassword\": \"Next@1234\",\r\n    \"confirmPassword\": \"Next@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/resetPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"resetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": 0,\r\n    \"maxResult\": 20,\r\n    \"searchValue\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/list/getLists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						"getLists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dashboard Chart Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA2MDEyNjAsImV4cCI6MTcxMDYwNjY2MH0.d1DU2oBMBp2srZiknCNxA9gDj4l2X3MgmRkvy0OPXvo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": 0,\r\n    \"maxResult\": 20,\r\n    \"searchValue\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/list/dashboardData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						"dashboardData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reviews Of A Restaurant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/rating/getratings?id=65f52e1c7de41d246feb8530",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"rating",
+						"getratings"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65f52e1c7de41d246feb8530"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Restaurant Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Food Court\",\r\n    \"description\": \"Food Court\",\r\n    \"owner\": \"Surenthernath\",\r\n    \"availability\": true,\r\n    \"nonVeg\": false,\r\n    \"costPerPerson\": 381,\r\n    \"imageUrl\": \"https://www.shutterstock.com/image-photo/restaurant-chilling-out-classy-lifestyle-260nw-507639565.jpg\",\r\n    \"createdAt\": \"2024-03-16T05:28:34.669Z\",\r\n    \"updatedAt\": \"2024-03-16T10:43:46.418Z\",\r\n    \"phone\": 98765432,\r\n    \"address\": \"Chennai\",\r\n    \"id\": \"65f52e027de41d246feb852d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/list/updatelist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						"updatelist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Restaurant Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Food Court\",\r\n    \"description\": \"Food Court\",\r\n    \"owner\": \"Surenthernath\",\r\n    \"availability\": true,\r\n    \"nonVeg\": false,\r\n    \"costPerPerson\": 381,\r\n    \"imageUrl\": \"https://www.shutterstock.com/image-photo/restaurant-chilling-out-classy-lifestyle-260nw-507639565.jpg\",\r\n    \"createdAt\": \"2024-03-16T05:28:34.669Z\",\r\n    \"updatedAt\": \"2024-03-16T10:43:46.418Z\",\r\n    \"phone\": 98765432,\r\n    \"address\": \"Chennai\",\r\n    \"id\": \"65f52e027de41d246feb852d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/list/deleteList?id=65f52e1c7de41d246feb8530",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						"deleteList"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65f52e1c7de41d246feb8530"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Restaurant Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"availability\": true,\r\n    \"name\": \"New Food Court\",\r\n    \"description\": \"New Food Court\",\r\n    \"owner\": \"Surendar\",\r\n    \"phone\": \"12312312309\",\r\n    \"address\": \"Salem\",\r\n    \"costPerPerson\": \"386\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/list/addlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						"addlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Review For A Restaurant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rating\": 4,\r\n    \"comment\": \"Super\",\r\n    \"list\": \"65f5a49d09521f1e11af7b82\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/rating/addrating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"rating",
+						"addrating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Review Of A Restaurant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"list\": \"65f5a49d09521f1e11af7b82\",\r\n    \"id\": \"65f5a4b009521f1e11af7b8c\",\r\n    \"comment\": \"Super Thanks for good food\",\r\n    \"rating\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/rating/updaterating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"rating",
+						"updaterating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Review Of A Restaurant Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cmVuQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTdXJlbnRoZXJuYXRoIEoiLCJ1c2VyX2lkIjoiNjVmNTA5ZTk4ZjRiYjBjMDRlMjVmMWViIiwicm9sZWlkIjozLCJpYXQiOjE3MTA1OTU2MjQsImV4cCI6MTcxMDYwMTAyNH0.oEk90_Is-nhXDJS2TcYAq0eC0oKfXT3AZf3DQOj1kqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/rating/deleterating?id=65f5a4e909521f1e11af7b94",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"rating",
+						"deleterating"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65f5a4e909521f1e11af7b94"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
