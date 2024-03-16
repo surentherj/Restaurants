@@ -8,21 +8,21 @@ Developed using MERN stack
 
 steps to run:
 
-clone the repo & go to restaurants folder
-in env. replace the email & password if needed for notification, replace the mongo url (using localhost:27017/restaurants)
+clone the repo & go to restaurants folder,
+1. In .env replace the email & password if needed for notification, replace the mongo url (using localhost:27017/restaurants)
 
-1. in one terminal
-   cd backend
-   npm install
-   npm run dev
+2. in one terminal
+   ->cd backend
+   ->npm install
+   ->npm run dev
 
    output => started on localhost:4000, and mongo db connected
 
-2. in another terminal
-   cd frontend
-   npm install
-   npm run dev
-    
+3. in another terminal
+   ->cd frontend
+   ->npm install
+   ->npm run dev
+
    output => started, access on http://localhost:3000
 
 
